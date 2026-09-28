@@ -36,7 +36,7 @@
             background: #000000;
         }
         
-        /* Ajuste dinámico para forzar la reproducción correcta en el recuadro */
+        /* Fuerza al iframe a estirarse y llenar su contenedor de forma correcta sin desaparecer */
         #contenedor-youtube iframe {
             width: 100% !important;
             height: 100% !important;
@@ -118,9 +118,9 @@
 </head>
 <body>
 
-    <!-- 1. REPRODUCTOR CON FORMATO DE EMBED OFICIAL DE YOUTUBE -->
+    <!-- 1. VIDEO DE YOUTUBE SOLICITADO REORDENADO E INDEPENDIENTE -->
     <div id="contenedor-youtube">
-        <iframe src="https://youtube.com" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VXPgc8Enf_Y?si=-crOkwM0Koj20lgt&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
     <!-- 2. RECUADRO BLANCO DE LA CARTA -->
@@ -141,7 +141,7 @@
 
         const cartaTexto = document.getElementById('carta-texto');
 
-        // El mensaje completo se muestra instantáneamente al cargar
+        // Muestra el mensaje de manera directa al cargar
         window.addEventListener('DOMContentLoaded', () => {
             cartaTexto.textContent = mensaje;
         });
